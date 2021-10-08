@@ -6,8 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/gradientbackground"/>
+
     <TextView
-        android:id="@+id/locTItle"
+        android:id="@+id/loc_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Location 101"
