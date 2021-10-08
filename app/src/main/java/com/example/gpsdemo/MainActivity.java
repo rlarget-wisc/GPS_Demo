@@ -13,6 +13,8 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private LocationListener locationListener;
@@ -62,5 +64,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateLocationInfo(Location location) {
+
+        Log.i("LocationInfo",location.toString());
+
+        TextView latitude = (TextView) findViewById(R.id.latitude);
+        TextView longitude = (TextView) findViewById(R.id.longitude);
+        TextView accuracy = (TextView) findViewById(R.id.accuracy);
+        TextView altitude = (TextView) findViewById(R.id.altitude);
+        latitude.setText("Latitude: "+location.getLatitude());
+        longitude.setText("Longitude: "+location.getLongitude());
+        accuracy.setText("Accuracy: "+location.getAccuracy());
+        altitude.setText("Altitude: "+location.getAltitude());
     }
 }
